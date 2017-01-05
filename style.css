@@ -7,9 +7,21 @@
     height:50px;
     width:150px;
     margin:25px;
-    margin-left:75px;
+    margin-left:auto;
 }
+#Strict{
+  height:50px;
+  width:150px;
+  margin:25px;
+  margin-left: auto;
+}
+#Strict.dark{
+  background: black;
+}
+.all{
+  margin:100px;
 
+}
 .green{
   background:green;
 }

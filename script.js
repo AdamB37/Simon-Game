@@ -6,17 +6,21 @@ $(document).ready(function(){
   var lightSeq = [];
   var turn = 0;
   var attempts = 0;
-
+  var strictMode = false;
 
 
   $("#Start").click(function(){
     lightSeq = [];
-    turn = 2;
+    turn = 0;
     for(var i=0; i<20; i++){
       lightSeq.push(Math.floor(Math.random()*4));
     }
     computerPhase();
 
+  });
+
+  $("#Strict").click(function(){
+    strictModeToggle($(this));
   });
 
   //player phase
@@ -37,18 +41,36 @@ $(document).ready(function(){
 
   $(".target").mouseup(function () {
     if (click == true){
-      release();
+      release($(this));
     }
   });
 
   $(".target").mouseout(function () {
     if (click == true){
-      release();
+      release($(this));
     }
   });
 
-  var release = function(){
+  var release = function(curClick){
     deActive($('.light'));
+    if(!curClick.hasClass(lightSeq[attempts].toString())){
+      if(strictMode){
+        setTimeout(function(){
+          lightSeq = [];
+          turn = 0;
+          for(var i=0; i<20; i++){
+            lightSeq.push(Math.floor(Math.random()*4));
+          }
+          computerPhase();
+        },600)
+      }
+      else{
+        
+          turn--;;
+          computerPhase();
+      }
+    }
+
     attempts++;
     click = false;
     console.log('attempts',attempts,'turn',turn);
@@ -96,6 +118,20 @@ $(document).ready(function(){
   }
 
   //functions
+  var strictModeToggle = function(button){
+    if(strictMode){
+      strictMode = false;
+      if(button.prop('id') != null){
+        button.removeClass("dark");
+      }
+    }
+    else if(!strictMode){
+      strictMode = true;
+      if(button.prop('id') != null){
+        button.addClass("dark");
+      }
+    }
+  }
 
   var active = function(color){
     if(color.prop('id')!= null){
