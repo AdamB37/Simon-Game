@@ -1,0 +1,37 @@
+.target{
+    height:150px;
+    width:150px;
+}
+
+#Start{
+    height:50px;
+    width:150px;
+    margin:25px;
+    margin-left:75px;
+}
+
+.green{
+  background:green;
+}
+.blue{
+  background:blue;
+}
+.red{
+  background:red;
+}
+.yellow{
+  background:yellow;
+}
+
+.green.light{
+  background:lightgreen;
+}
+.blue.light{
+  background:lightblue;
+}
+.red.light{
+  background:pink;
+}
+.yellow.light{
+  background:lightyellow;
+}
