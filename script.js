@@ -120,12 +120,14 @@ $(document).ready(function(){
       strictMode = false;
       if(button.prop('id') != null){
         button.removeClass("dark");
+        oscillator.type = 'sine';
       }
     }
     else if(!strictMode){
       strictMode = true;
       if(button.prop('id') != null){
         button.addClass("dark");
+        oscillator.type = 'triangle';
       }
     }
   }
