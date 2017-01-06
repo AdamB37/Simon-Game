@@ -5,19 +5,17 @@ $(document).ready(function(){
   var attempt = 1;
   var strictMode = false;
   var colorIndex = {Red:1,Green:2,Yellow:3,Blue:4};
-
-
+//audio
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
   var oscillator = audioCtx.createOscillator();
   var gainNode = audioCtx.createGain();
   oscillator.start();
-  oscillator.type = 'sawtooth';
+  oscillator.type = 'sine';
   gainNode.connect(audioCtx.destination);
 
 
   $("#Start").click(function(){
-    start();
+    generateSeq();
     computerPhase();
     $("#Start").text('Restart');
   });
@@ -140,7 +138,7 @@ $(document).ready(function(){
     return false;
   }
 
-  var start = function() {
+  var generateSeq = function() {
     lightSeq = [];
     turn = 0;
     for(var i=0; i<20; i++){
@@ -148,18 +146,17 @@ $(document).ready(function(){
     }
   }
 
-  var active = function(color){
-    if(color.prop('id')!= null){
-      $(color).addClass("light");
-      //$('.' + color.prop('id')).get(0).play();
-      oscillator.frequency.value = colorIndex[color.prop('id')]*100;
+  var active = function(object){
+    if(object.prop('id')!= null){
+      $(object).addClass("light");
+      oscillator.frequency.value = colorIndex[object.prop('id')]*100;
       oscillator.connect(gainNode);
     }
   }
 
-  var deActive = function(color){
-    if(color.prop('id')!= null){
-      $(color).removeClass("light");
+  var deActive = function(object){
+    if(object.prop('id')!= null){
+      $(object).removeClass("light");
       oscillator.disconnect(gainNode);
 
     }
