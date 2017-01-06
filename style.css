@@ -1,49 +1,112 @@
 .target{
-    height:150px;
-    width:150px;
+    height:300px;
+    width:300px;
 }
 
-#Start{
-    height:50px;
-    width:150px;
-    margin:25px;
-    margin-left:auto;
+
+#Strict.dark{
+  background: brown;
 }
-#Strict{
+#Counter{
   height:50px;
   width:150px;
-  margin:25px;
-  margin-left: auto;
-}
-#Strict.dark{
   background: black;
+  color: red;
+  border-style: solid;
 }
+
+.interface{
+  height:50px;
+  width:150px;
+  margin:30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size:200%;
+
+}
+
 .all{
-  margin:100px;
+
+
+
+
 
 }
 .green{
-  background:green;
+  border-width: 10px;
+  border-color: #404E4D;
+  border-top-left-radius: 100%;
+  border-style:solid;
+  background:#658228;
+  margin:-5px;
+  margin-right:50px;
+  padding:0px;
+  outline:none;
 }
 .blue{
-  background:blue;
+  border-width: 10px;
+  border-color: #404E4D;
+  border-bottom-right-radius: 100%;
+  border-style:solid;
+  background:#4898BA;
+  margin:0px;
+  padding:0px;
+  outline:none;
 }
 .red{
-  background:red;
+  border-width: 10px;
+  border-color: #404E4D;
+  border-style:solid;
+  border-top-right-radius: 100%;
+  border-style:solid;
+  background:#AD3937;
+  margin:0px;
+  padding:0px;
+  outline:none;
 }
 .yellow{
-  background:yellow;
+  border-width: 10px;
+  border-color: #404E4D;
+  border-bottom-left-radius: 100%;
+  border-style:solid;
+  background:#BCAD38;
+  margin:-5px;
+  margin-right:50px;
+  padding:0px;
+  outline:none;
 }
 
 .green.light{
-  background:lightgreen;
+  border-top-left-radius: 100%;
+  border-style:solid;
+  background:#9BC53D;
+  margin:-5px;
+  margin-right:50px;
+  padding:0px;
+  outline:none;
 }
 .blue.light{
-  background:lightblue;
+  border-bottom-right-radius: 100%;
+  border-style:solid;
+  background:#5BC0EB;
+  margin:0px;
+  padding:0px;
+  outline:none;
 }
 .red.light{
-  background:pink;
+  border-top-right-radius: 100%;
+  border-style:solid;
+  background:#E04A47;
+  margin:0px;
+  padding:0px;
+  outline:none;
 }
 .yellow.light{
-  background:lightyellow;
+  border-bottom-left-radius: 100%;
+  border-style:solid;
+  background:#FDE74C;
+  margin:-5px;
+  margin-right:50px;
+  padding:0px;
+  outline:none;
 }
