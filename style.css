@@ -1,37 +1,76 @@
-.target{
-    height:150px;
-    width:150px;
+
+
+
+
+
+#Strict.dark{
+  background: brown;
+}
+#Start{
+  margin-left:15%;
+}
+#Counter{
+  background: black;
+  color: red;
+  border-style: solid;
 }
 
-#Start{
-    height:50px;
-    width:150px;
-    margin:25px;
-    margin-left:75px;
+.container{
+  width: 100%;
+  position: relative; /* If you want text inside of it */
+}
+
+
+.interface{
+  border-style:solid;
+  outline:none;
+  width:13.6%;
+  font-size:150%;
+  position: relative;
+  margin-right:3%;
+  margin-left:3%;
+}
+
+.target{
+  width:25%;
+  border-style:solid;
+  border-width: 10px;
+  border-color: #404E4D;
+  outline:none;
+  padding-top: 24%;
+
+}
+
+.yellow{
+  border-bottom-left-radius: 100%;
+  background:#BCAD38;
+  margin-right:3%;
+  margin-left:15%;
 }
 
 .green{
-  background:green;
+  border-top-left-radius: 100%;
+  background:#658228;
+  margin-right:3%;
+  margin-left:15%;
 }
 .blue{
-  background:blue;
+  border-bottom-right-radius: 100%;
+  background:#4898BA;
 }
 .red{
-  background:red;
+  border-top-right-radius: 100%;
+  background:#AD3937;
 }
-.yellow{
-  background:yellow;
-}
-
 .green.light{
-  background:lightgreen;
+  background:#9BC53D;
 }
 .blue.light{
-  background:lightblue;
+  background:#5BC0EB;
 }
 .red.light{
-  background:pink;
+  background:#E04A47;
 }
 .yellow.light{
-  background:lightyellow;
+  background:#FDE74C;
 }
