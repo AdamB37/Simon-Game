@@ -114,21 +114,18 @@ $(document).ready(function(){
     myLoop();
   }
 
-  //functions
+  //helper functions
   var strictModeToggle = function(button){
     if(strictMode){
       strictMode = false;
-      if(button.prop('id') != null){
-        button.removeClass("dark");
-        oscillator.type = 'sine';
-      }
+      button.removeClass("dark");
+      oscillator.type = 'sine';
+
     }
     else if(!strictMode){
       strictMode = true;
-      if(button.prop('id') != null){
-        button.addClass("dark");
-        oscillator.type = 'triangle';
-      }
+      button.addClass("dark");
+      oscillator.type = 'triangle';
     }
   }
 
@@ -149,19 +146,14 @@ $(document).ready(function(){
   }
 
   var active = function(object){
-    if(object.prop('id')!= null){
-      $(object).addClass("light");
-      oscillator.frequency.value = colorIndex[object.prop('id')]*100;
-      oscillator.connect(gainNode);
-    }
+    $(object).addClass("light");
+    oscillator.frequency.value = colorIndex[object.prop('id')]*100;
+    oscillator.connect(gainNode);
   }
 
   var deActive = function(object){
-    if(object.prop('id')!= null){
-      $(object).removeClass("light");
-      oscillator.disconnect(gainNode);
-
-    }
+    $(object).removeClass("light");
+    oscillator.disconnect(gainNode);
   }
 
   var unClickableAll = function(){
